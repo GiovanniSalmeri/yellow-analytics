@@ -26,7 +26,7 @@ CookieconsentManageText: Cookies verwalten
 
 Language: en
 CookieconsentBannerHeading: We use cookies
-CookieconsentBannerDescription: We use our own and third-party cookies to personalize content and to analyze web traffic.
+CookieconsentBannerDescription: We use our own and third-party cookies to personalise content and to analyse web traffic.
 CookieconsentBannerLinkText: Read more about cookies
 CookieconsentAcceptBtnText: Accept cookies
 CookieconsentRejectBtnText: Reject
