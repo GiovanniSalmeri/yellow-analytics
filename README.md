@@ -13,10 +13,10 @@ This extension adds Google Analytics, Facebook Pixel or Hotjar to the site and c
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
 `CookieconsentStyle` (default: `1`) = banner style; possible values are `1`, `2`, `3`  
-`CookieconsentPolicy` = page for policy link, e.g. `privacy-statement` 
+`CookieconsentPolicy` = page for policy link, e.g. `privacy-statement`  
 `CookieconsentGoogleAnalytics` = Google Analytics alphanumeric tracking code  
 `CookieconsentFacebookPixel` = Facebook Pixel numeric code  
-`CookieconsentHotjar` = Hotjar numeric tracking code
+`CookieconsentHotjar` = Hotjar numeric tracking code  
 
 Al least one of `CookieconsentGoogleAnalytics`, `CookieconsentFacebookPixel` or `CookieconsentHotjar` must be set for the extension to be useful.
 
