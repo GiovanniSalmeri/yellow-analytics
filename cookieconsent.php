@@ -30,7 +30,6 @@ class YellowCookieconsent {
                 analytics => $this->yellow->system->get("CookieconsentGoogleAnalytics"),
                 facebookPixel => $this->yellow->system->get("CookieconsentFacebookPixel"),
                 HotjarTrackingCode => $this->yellow->system->get("CookieconsentHotjar"),
-// controllare se la base viene presa bene
                 policyLink => $this->yellow->system->get("CookieconsentPolicy") ? $page->getBase($this->yellow->system->get("coreMultiLanguageMode"))."/".$this->yellow->system->get("CookieconsentPolicy") : null,
                 bannerHeading => $this->yellow->language->getTextHtml("CookieconsentBannerHeading"),
                 bannerDescription => $this->yellow->language->getTextHtml("CookieconsentBannerDescription"),
