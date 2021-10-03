@@ -8,7 +8,7 @@ class YellowCookieconsent {
     // Handle initialisation
     public function onLoad($yellow) {
         $this->yellow = $yellow;
-        $this->yellow->system->setDefault("cookieconsentStyle", "1"); // 1, 2 or 3
+        $this->yellow->system->setDefault("cookieconsentStyle", "2"); // 1, 2 or 3
         $this->yellow->system->setDefault("cookieconsentPolicy", "");
         $this->yellow->system->setDefault("cookieconsentGoogleAnalytics", "");
         $this->yellow->system->setDefault("cookieconsentFacebookPixel", "");
