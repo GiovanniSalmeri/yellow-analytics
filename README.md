@@ -8,8 +8,6 @@ Web analytics and cookie consent banner.
 
 This extension adds analytics by [Matomo](https://matomo.org/docs/installation/), [Google Analytics](https://marketingplatform.google.com/about/analytics/), [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel/implementation) or [Hotjar](https://www.hotjar.com/) to the site and creates a GDPR-compliant cookie consent banner which enables or disables them.
 
-In order to use this extension 
-
 ## Settings
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
