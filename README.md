@@ -6,7 +6,12 @@ Web analytics and cookie consent banner.
 
 ## How to add a cookie consent banner
 
-This extension adds analytics by [Matomo](https://matomo.org/docs/installation/), [Open Web Analytics](https://github.com/Open-Web-Analytics/Open-Web-Analytics/wiki/), [Google Analytics](https://marketingplatform.google.com/about/analytics/), [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel/implementation) or [Hotjar](https://www.hotjar.com/) to the site and creates a GDPR-compliant cookie consent banner which enables or disables them.
+This extension adds web analytics through third-party services and creates a GDPR-compliant cookie consent banner.
+
+Supported services are [Matomo](https://matomo.org/docs/installation/), [Open Web Analytics](https://github.com/Open-Web-Analytics/Open-Web-Analytics/wiki/), 
+[Google Analytics](https://marketingplatform.google.com/about/analytics/), [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel/implementation) and [Hotjar](https://www.hotjar.com/).
+
+The extension does nothing if no service is configured.
 
 ## Settings
 
@@ -16,11 +21,9 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `CookieconsentPolicy` = page for policy, e.g. `privacy-statement`  
 `CookieconsentMatomo` = Matomo URL and siteId, e.g. `mysite.org/matomo#1`  
 `CookieconsentOpenWebAnalytics` = Open Web Analytics URL and siteId, e.g. `mysite.org/owa#12345`  
-`CookieconsentGoogleAnalytics` = Google Analytics alphanumeric tracking code  
+`CookieconsentGoogleAnalytics` = Google Analytics alphanumeric code  
 `CookieconsentFacebookPixel` = Facebook Pixel numeric code  
-`CookieconsentHotjar` = Hotjar numeric tracking code  
-
-Al least one of `CookieconsentMatomo`, `CookieconsentGoogleAnalytics`, `CookieconsentFacebookPixel` or `CookieconsentHotjar` must be set for the banner to be shown.
+`CookieconsentHotjar` = Hotjar numeric code  
 
 ## Installation
 
