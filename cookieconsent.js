@@ -137,6 +137,24 @@ class GlowCookies {
       document.head.appendChild(MatomoTrackingData);
     }
 
+    // Open Web Analytics
+    if (this.tracking.OpenWebAnalyticsUrl) {
+      let OpenWebAnalyticsParts = this.tracking.OpenWebAnalyticsUrl.split("#");
+      let OpenWebAnalyticsScript = document.createElement('script');
+      OpenWebAnalyticsScript.setAttribute('src', `'//${OpenWebAnalyticsParts[0]}//modules/base/js/owa.tracker-combined-min.js';`);
+      document.head.appendChild(OpenWebAnalyticsScript);
+      let OpenWebAnalyticsData = document.createElement('script');
+      OpenWebAnalyticsData.text = `
+                                OWA.setSetting('baseUrl', '//${OpenWebAnalyticsParts[0]}/');
+                                OWATracker = new OWA.tracker();
+                                OWATracker.setSiteId('${OpenWebAnalyticsParts[1]}');
+                                OWATracker.trackPageView();
+                                OWATracker.trackClicks();
+                                OWATracker.trackDomStream();
+                                `;
+      document.head.appendChild(OpenWebAnalyticsData);
+    }
+
     // Google Analytics Tracking
     if (this.tracking.AnalyticsCode) {
       let Analytics = document.createElement('script');
@@ -265,7 +283,7 @@ class GlowCookies {
     }
 
     this.tracking = {
-
+      OpenWebAnalyticsUrl: obj.owa || undefined,
       MatomoTrackingUrl: obj.matomo || undefined,
       AnalyticsCode: obj.analytics || undefined,
       FacebookPixelCode: obj.facebookPixel || undefined,
