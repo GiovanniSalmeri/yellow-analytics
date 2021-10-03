@@ -11,7 +11,6 @@ class YellowCookieconsent {
         $this->yellow->system->setDefault("cookieconsentStyle", "2"); // 1, 2 or 3
         $this->yellow->system->setDefault("cookieconsentPolicy", "");
         $this->yellow->system->setDefault("cookieconsentMatomo", "");
-        $this->yellow->system->setDefault("cookieconsentOpenWebAnalytics", "");
         $this->yellow->system->setDefault("cookieconsentGoogleAnalytics", "");
         $this->yellow->system->setDefault("cookieconsentFacebookPixel", "");
         $this->yellow->system->setDefault("cookieconsentHotjar", "");
@@ -21,7 +20,7 @@ class YellowCookieconsent {
     public function onParsePageExtra($page, $name) {
         $output = null;
         if ($name=="header") {
-            if ($this->yellow->system->isExisting("cookieconsentMatomo") || $this->yellow->system->isExisting("cookieconsentOpenWebAnalytics") || $this->yellow->system->isExisting("cookieconsentGoogleAnalytics") || $this->yellow->system->isExisting("cookieconsentFacebookPixel") || $this->yellow->system->isExisting("cookieconsentHotjar")) {
+            if ($this->yellow->system->isExisting("cookieconsentMatomo") || $this->yellow->system->isExisting("cookieconsentGoogleAnalytics") || $this->yellow->system->isExisting("cookieconsentFacebookPixel") || $this->yellow->system->isExisting("cookieconsentHotjar")) {
                 $extensionLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreExtensionLocation");
                 $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$extensionLocation}cookieconsent.css\" />\n";
                 $output .= "<script type=\"text/javascript\"  src=\"{$extensionLocation}cookieconsent.js\"></script>\n";
@@ -31,9 +30,6 @@ class YellowCookieconsent {
                     style => $this->yellow->system->get("cookieconsentStyle"),
                     position => "right",
                     matomo => $this->yellow->system->get("cookieconsentMatomo"),
-                    owa => $this->yellow->system->get("cookieconsentOpenWebAnalytics"),
-                    cloudfare => $this->yellow->system->get("cookieconsentCloudfare"),
-                    plausible => $this->yellow->system->get("cookieconsentPlausible"),
                     analytics => $this->yellow->system->get("cookieconsentGoogleAnalytics"),
                     facebookPixel => $this->yellow->system->get("cookieconsentFacebookPixel"),
                     HotjarTrackingCode => $this->yellow->system->get("cookieconsentHotjar"),
