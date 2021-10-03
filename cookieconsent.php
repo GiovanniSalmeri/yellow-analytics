@@ -1,5 +1,5 @@
 <?php
-// Cookieconsent extension
+// Cookieconsent extension, https://github.com/GiovanniSalmeri/yellow-cookieconsent
 
 class YellowCookieconsent {
     const VERSION = "0.8.16";

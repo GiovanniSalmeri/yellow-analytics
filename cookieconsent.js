@@ -5,6 +5,7 @@
     2021 - v 3.1.3
 
 Changes by GS 2021-10-02
+https://github.com/GiovanniSalmeri/yellow-cookieconsent
 
 + Corrected according to https://github.com/manucaralmo/GlowCookies/discussions/40
 + Deleted SVG
