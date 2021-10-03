@@ -10,6 +10,7 @@ Changes by GS 2021-10-02
 + Deleted SVG
 + Deleted addCss
 + Deleted languages
++ Added Matomo
 
 */
 
@@ -116,6 +117,25 @@ class GlowCookies {
   }
 
   activateTracking() {
+    // Matomo Tracking
+    if (this.tracking.MatomoTrackingUrl) {
+      let MatomoTrackingParts = this.tracking.MatomoTrackingUrl.split("#");
+      let MatomoTrackingData = document.createElement('script');
+      MatomoTrackingData.text = `
+                                var _paq = window._paq = window._paq || [];
+                                _paq.push(['trackPageView']);
+                                _paq.push(['enableLinkTracking']);
+                                (function() {
+                                  var u="//${MatomoTrackingParts[0]}/";
+                                  _paq.push(['setTrackerUrl', u+'matomo.php']);
+                                  _paq.push(['setSiteId', ${MatomoTrackingParts[1]}]);
+                                  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                                  g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+                                })();
+                                `;
+      document.head.appendChild(MatomoTrackingData);
+    }
+
     // Google Analytics Tracking
     if (this.tracking.AnalyticsCode) {
       let Analytics = document.createElement('script');
@@ -244,6 +264,8 @@ class GlowCookies {
     }
 
     this.tracking = {
+
+      MatomoTrackingUrl: obj.matomo || undefined,
       AnalyticsCode: obj.analytics || undefined,
       FacebookPixelCode: obj.facebookPixel || undefined,
       HotjarTrackingCode: obj.hotjar || undefined,
