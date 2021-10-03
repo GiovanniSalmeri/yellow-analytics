@@ -36,7 +36,7 @@
 
 .glowCookies__banner .accept__btn__styles {
   border: none;
-  padding: 13px 15px;
+  padding: 5px 5px; /* was 13px 15px */
   font-size: 15px;
   font-family: inherit;
   width: 49%;
@@ -48,7 +48,7 @@
 
 .glowCookies__banner .settings__btn__styles {
   border: none;
-  padding: 13px 15px;
+  padding: 5px 5px;  /* was 13px 15px */
   font-family: inherit;
   font-size: 15px;
   width: 49%;
@@ -92,7 +92,7 @@
 .glowCookies__banner__1 > h3 {
   font-size: 24px;
   margin: 0px;
-  padding: 8px 0;
+  padding: 2px 0; /* was 8px 0 */
 }
 
 .glowCookies__banner__1 > p {
@@ -144,13 +144,13 @@
 .glowCookies__banner__2 {
   bottom: 15px;
   border-radius: 5px;
-  padding: 25px 35px;
+  padding: 15px 25px; /* was 25px 35px */
 }
 
 .glowCookies__banner__2 > h3 {
   font-size: 24px;
   margin: 0px;
-  padding: 8px 0;
+  padding: 2px 0; /* was 8px 0 */
 }
 
 .glowCookies__banner__2 > p {
@@ -203,13 +203,13 @@
 .glowCookies__banner__3 {
   bottom: 15px;
   border-radius: 0px;
-  padding: 25px 35px;
+  padding: 15px 25px; /* was 25px 35px */
 }
 
 .glowCookies__banner__3 > h3 {
   font-size: 30px;
   margin: 0px;
-  padding: 8px 0;
+  padding: 2px 0; /* was 8px 0 */
 }
 
 .glowCookies__banner__3 > p {
@@ -302,4 +302,3 @@
 .prebanner:hover {
   text-decoration: none;
 }
-
