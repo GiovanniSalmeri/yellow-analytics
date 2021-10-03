@@ -18,7 +18,7 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `CookieconsentFacebookPixel` = Facebook Pixel numeric code  
 `CookieconsentHotjar` = Hotjar numeric tracking code  
 
-Al least one of `CookieconsentGoogleAnalytics`, `CookieconsentFacebookPixel` or `CookieconsentHotjar` must be set for the extension to be useful.
+Al least one of `CookieconsentGoogleAnalytics`, `CookieconsentFacebookPixel` or `CookieconsentHotjar` must be set for the banner to be shown.
 
 ## Installation
 
