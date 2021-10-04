@@ -4,7 +4,7 @@ Web analytics and cookie consent banner.
 
 <p align="center"><img src="analytics-screenshot.png?raw=true" width="795" height="836" alt="Screenshot"></p>
 
-## How to add a cookie consent banner
+## How to add web analytics
 
 This extension adds web analytics through third-party services and creates a GDPR-compliant cookie consent banner.
 
