@@ -160,7 +160,7 @@ class GlowCookies {
     if (this.tracking.OpenWebAnalyticsUrl) {
       let OpenWebAnalyticsParts = this.tracking.OpenWebAnalyticsUrl.split("#");
       let OpenWebAnalyticsScript = document.createElement('script');
-      OpenWebAnalyticsScript.setAttribute('src', `//${OpenWebAnalyticsParts[0]}//modules/base/js/owa.tracker-combined-min.js`);
+      OpenWebAnalyticsScript.src = `//${OpenWebAnalyticsParts[0]}//modules/base/js/owa.tracker-combined-min.js`;
       document.head.appendChild(OpenWebAnalyticsScript);
       let OpenWebAnalyticsData = document.createElement('script');
       OpenWebAnalyticsData.text = `
@@ -176,7 +176,7 @@ class GlowCookies {
     // Google Analytics Tracking
     if (this.tracking.AnalyticsCode) {
       let Analytics = document.createElement('script');
-      Analytics.setAttribute('src', `https://www.googletagmanager.com/gtag/js?id=${this.tracking.AnalyticsCode}`);
+      Analytics.src = `https://www.googletagmanager.com/gtag/js?id=${this.tracking.AnalyticsCode}`;
       document.head.appendChild(Analytics);
       let AnalyticsData = document.createElement('script');
       AnalyticsData.text = `
@@ -203,11 +203,11 @@ class GlowCookies {
         fbq('track', 'PageView');`;
       document.head.appendChild(FacebookPixelData);
       let FacebookPixelNS = document.createElement('noscript');
-      let FacebookPixel = document.createElement('img');
-      FacebookPixel.setAttribute('height', `1`);
-      FacebookPixel.setAttribute('width', `1`);
-      FacebookPixel.setAttribute('style', `display:none`);
-      FacebookPixel.setAttribute('src', `https://www.facebook.com/tr?id=${this.tracking.FacebookPixelCode}&ev=PageView&noscript=1`);
+        let FacebookPixel = document.createElement('img');
+        FacebookPixel.height = 1;
+        FacebookPixel.width = 1;
+        FacebookPixel.style.display = 'none';
+        FacebookPixel.src = `https://www.facebook.com/tr?id=${this.tracking.FacebookPixelCode}&ev=PageView&noscript=1`;
       FacebookPixelNS.appendChild(FacebookPixel);
       document.head.appendChild(FacebookPixelNS);
     }
@@ -232,7 +232,7 @@ class GlowCookies {
     // Google Analytics Tracking ('client_storage': 'none')
     if (this.tracking.AnalyticsCode) {
       let Analytics = document.createElement('script');
-      Analytics.setAttribute('src', `https://www.googletagmanager.com/gtag/js?id=${this.tracking.AnalyticsCode}`);
+      Analytics.src = `https://www.googletagmanager.com/gtag/js?id=${this.tracking.AnalyticsCode}`;
       document.head.appendChild(Analytics);
       let AnalyticsData = document.createElement('script');
       AnalyticsData.text = `
@@ -274,7 +274,7 @@ class GlowCookies {
       this.tracking.customScript.forEach(script => {
         if (script.type === 'src') {
           customScriptTag = document.createElement('script');
-          customScriptTag.setAttribute('src', script.content);
+          customScriptTag.src = script.content;
         } else if (script.type === 'custom') {
           customScriptTag = document.createElement('script');
           customScriptTag.text = script.content;
