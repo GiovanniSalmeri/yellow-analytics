@@ -15,7 +15,6 @@ https://github.com/GiovanniSalmeri/yellow-analytics
 + Added Open Web Analytics
 + Cookies banner prepended, not appended (accessibility)
 + ARIA roles added (accessibility)
-+ DOM instead of innerHTML
 
 */
 
@@ -41,14 +40,14 @@ class GlowCookies {
     // COOKIES BUTTON
     this.PreBanner = document.createElement('div');
     this.PreBanner.style.display = 'none';
-      this.PreBannerButton = document.createElement('button');
-      this.PreBannerButton.type = 'button';
-      this.PreBannerButton.id = 'prebannerBtn';
-      this.PreBannerButton.className = `prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} glowCookies__${this.config.border} animation`;
-      this.PreBannerButton.style.color = this.banner.manageCookies.color;
-      this.PreBannerButton.style.backgroundColor = this.banner.manageCookies.background;
-      this.PreBannerButton.textContent = this.banner.manageCookies.text;
-    this.PreBanner.appendChild(this.PreBannerButton);
+      let PreBannerButton = document.createElement('button');
+      PreBannerButton.type = 'button';
+      PreBannerButton.id = 'prebannerBtn';
+      PreBannerButton.className = `prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} glowCookies__${this.config.border} animation`;
+      PreBannerButton.style.color = this.banner.manageCookies.color;
+      PreBannerButton.style.backgroundColor = this.banner.manageCookies.background;
+      PreBannerButton.textContent = this.banner.manageCookies.text;
+    this.PreBanner.appendChild(PreBannerButton);
     document.body.appendChild(this.PreBanner);
 
     // COOKIES BANNER
@@ -60,42 +59,42 @@ class GlowCookies {
     this.Cookies.setAttribute('aria-modal', 'false');
     this.Cookies.setAttribute('aria-labelledby', 'cookie-consent-title');
     this.Cookies.setAttribute('aria-describedby', 'cookie-consent-message');
-      this.CookiesHeading = document.createElement('h3');
-      this.CookiesHeading.id = 'cookie-consent-title';
-      this.CookiesHeading.style.color = this.banner.color;
-      this.CookiesHeading.textContent = this.banner.heading;
-    this.Cookies.appendChild(this.CookiesHeading);
-      this.CookiesContent = document.createElement('p');
-      this.CookiesContent.id = 'cookie-consent-message';
-      this.CookiesContent.style.color = this.banner.color;
-        this.CookiesNotice = document.createTextNode(this.banner.description+' ');
-      this.CookiesContent.appendChild(this.CookiesNotice);
-        this.CookiesLink = document.createElement('a');
-        this.CookiesLink.href = this.banner.link;
-        this.CookiesLink.className = 'read__more';
-        this.CookiesLink.style.color = this.banner.color;
-        this.CookiesLink.textContent = this.banner.linkText;
-      this.CookiesContent.appendChild(this.CookiesLink);
-    this.Cookies.appendChild(this.CookiesContent);
-      this.CookiesButtons = document.createElement('div');
-      this.CookiesButtons.className = 'btn__section';
-        this.CookiesButton1 = document.createElement('button');
-        this.CookiesButton1.type = 'button';
-        this.CookiesButton1.id = 'acceptCookies';
-        this.CookiesButton1.className = 'btn__accept accept__btn__styles';
-        this.CookiesButton1.style.color = this.banner.acceptBtn.color;
-        this.CookiesButton1.style.backgroundColor = this.banner.acceptBtn.background;
-        this.CookiesButton1.textContent = this.banner.acceptBtn.text;
-      this.CookiesButtons.appendChild(this.CookiesButton1);
-        this.CookiesButton2 = document.createElement('button');
-        this.CookiesButton2.type = 'button';
-        this.CookiesButton2.id = 'rejectCookies';
-        this.CookiesButton2.className = 'btn__settings settings__btn__styles';
-        this.CookiesButton2.style.color = this.banner.rejectBtn.color;
-        this.CookiesButton2.style.backgroundColor = this.banner.rejectBtn.background;
-        this.CookiesButton2.textContent = this.banner.rejectBtn.text;
-      this.CookiesButtons.appendChild(this.CookiesButton2);
-    this.Cookies.appendChild(this.CookiesButtons);
+      let CookiesHeading = document.createElement('h3');
+      CookiesHeading.id = 'cookie-consent-title';
+      CookiesHeading.style.color = this.banner.color;
+      CookiesHeading.textContent = this.banner.heading;
+    this.Cookies.appendChild(CookiesHeading);
+      let CookiesContent = document.createElement('p');
+      CookiesContent.id = 'cookie-consent-message';
+      CookiesContent.style.color = this.banner.color;
+        let CookiesNotice = document.createTextNode(this.banner.description+' ');
+      CookiesContent.appendChild(CookiesNotice);
+        let CookiesLink = document.createElement('a');
+        CookiesLink.href = this.banner.link;
+        CookiesLink.className = 'read__more';
+        CookiesLink.style.color = this.banner.color;
+        CookiesLink.textContent = this.banner.linkText;
+      CookiesContent.appendChild(CookiesLink);
+    this.Cookies.appendChild(CookiesContent);
+      let CookiesButtons = document.createElement('div');
+      CookiesButtons.className = 'btn__section';
+        let CookiesButton1 = document.createElement('button');
+        CookiesButton1.type = 'button';
+        CookiesButton1.id = 'acceptCookies';
+        CookiesButton1.className = 'btn__accept accept__btn__styles';
+        CookiesButton1.style.color = this.banner.acceptBtn.color;
+        CookiesButton1.style.backgroundColor = this.banner.acceptBtn.background;
+        CookiesButton1.textContent = this.banner.acceptBtn.text;
+      CookiesButtons.appendChild(CookiesButton1);
+        let CookiesButton2 = document.createElement('button');
+        CookiesButton2.type = 'button';
+        CookiesButton2.id = 'rejectCookies';
+        CookiesButton2.className = 'btn__settings settings__btn__styles';
+        CookiesButton2.style.color = this.banner.rejectBtn.color;
+        CookiesButton2.style.backgroundColor = this.banner.rejectBtn.background;
+        CookiesButton2.textContent = this.banner.rejectBtn.text;
+      CookiesButtons.appendChild(CookiesButton2);
+    this.Cookies.appendChild(CookiesButtons);
 
     document.body.insertBefore(this.Cookies,document.body.firstChild);
     this.DOMbanner = document.getElementById('glowCookies-banner')
@@ -150,17 +149,16 @@ class GlowCookies {
       let MatomoTrackingParts = this.tracking.MatomoTrackingUrl.split("#");
       let MatomoTrackingData = document.createElement('script');
       MatomoTrackingData.text = `
-                                var _paq = window._paq = window._paq || [];
-                                _paq.push(['trackPageView']);
-                                _paq.push(['enableLinkTracking']);
-                                (function() {
-                                  var u="//${MatomoTrackingParts[0]}/";
-                                  _paq.push(['setTrackerUrl', u+'matomo.php']);
-                                  _paq.push(['setSiteId', ${MatomoTrackingParts[1]}]);
-                                  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                                  g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-                                })();
-                                `;
+        var _paq = window._paq = window._paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+          var u="//${MatomoTrackingParts[0]}/";
+          _paq.push(['setTrackerUrl', u+'matomo.php']);
+          _paq.push(['setSiteId', ${MatomoTrackingParts[1]}]);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();`;
       document.head.appendChild(MatomoTrackingData);
     }
 
@@ -172,13 +170,12 @@ class GlowCookies {
       document.head.appendChild(OpenWebAnalyticsScript);
       let OpenWebAnalyticsData = document.createElement('script');
       OpenWebAnalyticsData.text = `
-                                OWA.setSetting('baseUrl', '//${OpenWebAnalyticsParts[0]}/');
-                                OWATracker = new OWA.tracker();
-                                OWATracker.setSiteId('${OpenWebAnalyticsParts[1]}');
-                                OWATracker.trackPageView();
-                                OWATracker.trackClicks();
-                                OWATracker.trackDomStream();
-                                `;
+        OWA.setSetting('baseUrl', '//${OpenWebAnalyticsParts[0]}/');
+        OWATracker = new OWA.tracker();
+        OWATracker.setSiteId('${OpenWebAnalyticsParts[1]}');
+        OWATracker.trackPageView();
+        OWATracker.trackClicks();
+        OWATracker.trackDomStream();`;
       document.head.appendChild(OpenWebAnalyticsData);
     }
 
@@ -188,10 +185,11 @@ class GlowCookies {
       Analytics.setAttribute('src', `https://www.googletagmanager.com/gtag/js?id=${this.tracking.AnalyticsCode}`);
       document.head.appendChild(Analytics);
       let AnalyticsData = document.createElement('script');
-      AnalyticsData.text = `window.dataLayer = window.dataLayer || [];
-                                function gtag(){dataLayer.push(arguments);}
-                                gtag('js', new Date());
-                                gtag('config', '${this.tracking.AnalyticsCode}');`;
+      AnalyticsData.text = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${this.tracking.AnalyticsCode}');`;
       document.head.appendChild(AnalyticsData);
     }
 
@@ -199,17 +197,16 @@ class GlowCookies {
     if (this.tracking.FacebookPixelCode) {
       let FacebookPixelData = document.createElement('script');
       FacebookPixelData.text = `
-                                    !function(f,b,e,v,n,t,s)
-                                    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                                    n.queue=[];t=b.createElement(e);t.async=!0;
-                                    t.src=v;s=b.getElementsByTagName(e)[0];
-                                    s.parentNode.insertBefore(t,s)}(window, document,'script',
-                                    'https://connect.facebook.net/en_US/fbevents.js');
-                                    fbq('init', '${this.tracking.FacebookPixelCode}');
-                                    fbq('track', 'PageView');
-                                `;
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '${this.tracking.FacebookPixelCode}');
+        fbq('track', 'PageView');`;
       document.head.appendChild(FacebookPixelData);
       let FacebookPixelNS = document.createElement('noscript');
       let FacebookPixel = document.createElement('img');
@@ -225,15 +222,14 @@ class GlowCookies {
     if (this.tracking.HotjarTrackingCode) {
       let hotjarTrackingData = document.createElement('script');
       hotjarTrackingData.text = `
-                                (function(h,o,t,j,a,r){
-                                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                                    h._hjSettings={hjid:${this.tracking.HotjarTrackingCode},hjsv:6};
-                                    a=o.getElementsByTagName('head')[0];
-                                    r=o.createElement('script');r.async=1;
-                                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                                    a.appendChild(r);
-                                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-                                `;
+        (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:${this.tracking.HotjarTrackingCode},hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`;
       document.head.appendChild(hotjarTrackingData);
     }
   }
@@ -245,13 +241,14 @@ class GlowCookies {
       Analytics.setAttribute('src', `https://www.googletagmanager.com/gtag/js?id=${this.tracking.AnalyticsCode}`);
       document.head.appendChild(Analytics);
       let AnalyticsData = document.createElement('script');
-      AnalyticsData.text = `window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', '${this.tracking.AnalyticsCode}' , {
-                            'client_storage': 'none',
-                            'anonymize_ip': true
-                        });`;
+      AnalyticsData.text = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${this.tracking.AnalyticsCode}' , {
+          'client_storage': 'none',
+          'anonymize_ip': true
+        });`;
       document.head.appendChild(AnalyticsData);
     }
 
