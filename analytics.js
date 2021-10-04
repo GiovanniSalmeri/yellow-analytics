@@ -5,7 +5,7 @@
     2021 - v 3.1.3
 
 Changes by GS 2021-10-02
-https://github.com/GiovanniSalmeri/yellow-cookieconsent
+https://github.com/GiovanniSalmeri/yellow-analytics
 
 + Corrected according to https://github.com/manucaralmo/GlowCookies/discussions/40
 + Deleted SVG
@@ -289,9 +289,9 @@ class GlowCookies {
     }
 
     this.tracking = {
-      OpenWebAnalyticsUrl: obj.owa || undefined,
       MatomoTrackingUrl: obj.matomo || undefined,
-      AnalyticsCode: obj.analytics || undefined,
+      OpenWebAnalyticsUrl: obj.owa || undefined,
+      AnalyticsCode: obj.google || undefined,
       FacebookPixelCode: obj.facebookPixel || undefined,
       HotjarTrackingCode: obj.hotjar || undefined,
       customScript: obj.customScript || undefined
