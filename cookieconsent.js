@@ -43,12 +43,16 @@ class GlowCookies {
     // COOKIES BANNER
     this.Cookies = document.createElement("div");
     this.Cookies.innerHTML = `<div 
+                                    role="dialog"
+                                    aria-modal="false"
+                                    aria-labelledby="cookie-consent-title"
+                                    aria-describedby="cookie-consent-message"
                                     id="glowCookies-banner" 
                                     class="glowCookies__banner glowCookies__banner__${this.config.bannerStyle} glowCookies__${this.config.border} glowCookies__${this.config.position}"
                                     style="background-color: ${this.banner.background};"
                                 >
-                                    <h3 style="color: ${this.banner.color};">${this.banner.heading}</h3>
-                                    <p style="color: ${this.banner.color};">
+                                    <h3 id="cookie-consent-title" style="color: ${this.banner.color};">${this.banner.heading}</h3>
+                                    <p id="cookie-consent-message" style="color: ${this.banner.color};">
                                         ${this.banner.description} 
                                         <a 
                                             href="${this.banner.link}"
@@ -69,9 +73,8 @@ class GlowCookies {
                                     </div>
                                 </div>
                             `;
-    document.body.appendChild(this.Cookies);
+    document.body.insertBefore(this.Cookies,document.body.firstChild);
     this.DOMbanner = document.getElementById('glowCookies-banner')
-
 
     // SET EVENT LISTENERS
     document.getElementById('prebannerBtn').addEventListener('click', () => this.openSelector())
