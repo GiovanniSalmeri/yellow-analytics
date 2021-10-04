@@ -15,6 +15,7 @@ https://github.com/GiovanniSalmeri/yellow-analytics
 + Added Open Web Analytics
 + Cookies banner prepended, not appended (accessibility)
 + ARIA roles added (accessibility)
++ DOM instead of innerHTML
 
 */
 
@@ -38,44 +39,64 @@ class GlowCookies {
 
   createDOMElements() {
     // COOKIES BUTTON
-    this.PreBanner = document.createElement("div");
-    this.PreBanner.innerHTML = `<button type="button" id="prebannerBtn" class="prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} glowCookies__${this.config.border} animation" style="color: ${this.banner.manageCookies.color}; background-color: ${this.banner.manageCookies.background};">${this.banner.manageCookies.text}</button>`;
-    this.PreBanner.style.display = "none";
+    this.PreBanner = document.createElement('div');
+    this.PreBanner.style.display = 'none';
+      this.PreBannerButton = document.createElement('button');
+      this.PreBannerButton.type = 'button';
+      this.PreBannerButton.id = 'prebannerBtn';
+      this.PreBannerButton.className = `prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} glowCookies__${this.config.border} animation`;
+      this.PreBannerButton.style.color = this.banner.manageCookies.color;
+      this.PreBannerButton.style.backgroundColor = this.banner.manageCookies.background;
+      this.PreBannerButton.textContent = this.banner.manageCookies.text;
+    this.PreBanner.appendChild(this.PreBannerButton);
     document.body.appendChild(this.PreBanner);
 
     // COOKIES BANNER
-    this.Cookies = document.createElement("div");
-    this.Cookies.innerHTML = `<div 
-                                    role="dialog"
-                                    aria-modal="false"
-                                    aria-labelledby="cookie-consent-title"
-                                    aria-describedby="cookie-consent-message"
-                                    id="glowCookies-banner" 
-                                    class="glowCookies__banner glowCookies__banner__${this.config.bannerStyle} glowCookies__${this.config.border} glowCookies__${this.config.position}"
-                                    style="background-color: ${this.banner.background};"
-                                >
-                                    <h3 id="cookie-consent-title" style="color: ${this.banner.color};">${this.banner.heading}</h3>
-                                    <p id="cookie-consent-message" style="color: ${this.banner.color};">
-                                        ${this.banner.description} 
-                                        <a 
-                                            href="${this.banner.link}"
-                                            target="_blank" 
-                                            class="read__more"
-                                            style="color: ${this.banner.color};"
-                                        >
-                                            ${this.banner.linkText}
-                                        </a>
-                                    </p>
-                                    <div class="btn__section">
-                                        <button type="button" id="acceptCookies" class="btn__accept accept__btn__styles" style="color: ${this.banner.acceptBtn.color}; background-color: ${this.banner.acceptBtn.background};">
-                                            ${this.banner.acceptBtn.text}
-                                        </button>
-                                        <button type="button" id="rejectCookies" class="btn__settings settings__btn__styles" style="color: ${this.banner.rejectBtn.color}; background-color: ${this.banner.rejectBtn.background};">
-                                            ${this.banner.rejectBtn.text}
-                                        </button>
-                                    </div>
-                                </div>
-                            `;
+    this.Cookies = document.createElement('div');
+    this.Cookies.id = 'glowCookies-banner';
+    this.Cookies.className = `glowCookies__banner glowCookies__banner__${this.config.bannerStyle} glowCookies__${this.config.border} glowCookies__${this.config.position}`;
+    this.Cookies.style.backgroundColor = this.banner.background;
+    this.Cookies.setAttribute('role', 'dialog');
+    this.Cookies.setAttribute('aria-modal', 'false');
+    this.Cookies.setAttribute('aria-labelledby', 'cookie-consent-title');
+    this.Cookies.setAttribute('aria-describedby', 'cookie-consent-message');
+      this.CookiesHeading = document.createElement('h3');
+      this.CookiesHeading.id = 'cookie-consent-title';
+      this.CookiesHeading.style.color = this.banner.color;
+      this.CookiesHeading.textContent = this.banner.heading;
+    this.Cookies.appendChild(this.CookiesHeading);
+      this.CookiesContent = document.createElement('p');
+      this.CookiesContent.id = 'cookie-consent-message';
+      this.CookiesContent.style.color = this.banner.color;
+        this.CookiesNotice = document.createTextNode(this.banner.description+' ');
+      this.CookiesContent.appendChild(this.CookiesNotice);
+        this.CookiesLink = document.createElement('a');
+        this.CookiesLink.href = this.banner.link;
+        this.CookiesLink.className = 'read__more';
+        this.CookiesLink.style.color = this.banner.color;
+        this.CookiesLink.textContent = this.banner.linkText;
+      this.CookiesContent.appendChild(this.CookiesLink);
+    this.Cookies.appendChild(this.CookiesContent);
+      this.CookiesButtons = document.createElement('div');
+      this.CookiesButtons.className = 'btn__section';
+        this.CookiesButton1 = document.createElement('button');
+        this.CookiesButton1.type = 'button';
+        this.CookiesButton1.id = 'acceptCookies';
+        this.CookiesButton1.className = 'btn__accept accept__btn__styles';
+        this.CookiesButton1.style.color = this.banner.acceptBtn.color;
+        this.CookiesButton1.style.backgroundColor = this.banner.acceptBtn.background;
+        this.CookiesButton1.textContent = this.banner.acceptBtn.text;
+      this.CookiesButtons.appendChild(this.CookiesButton1);
+        this.CookiesButton2 = document.createElement('button');
+        this.CookiesButton2.type = 'button';
+        this.CookiesButton2.id = 'rejectCookies';
+        this.CookiesButton2.className = 'btn__settings settings__btn__styles';
+        this.CookiesButton2.style.color = this.banner.rejectBtn.color;
+        this.CookiesButton2.style.backgroundColor = this.banner.rejectBtn.background;
+        this.CookiesButton2.textContent = this.banner.rejectBtn.text;
+      this.CookiesButtons.appendChild(this.CookiesButton2);
+    this.Cookies.appendChild(this.CookiesButtons);
+
     document.body.insertBefore(this.Cookies,document.body.firstChild);
     this.DOMbanner = document.getElementById('glowCookies-banner')
 
