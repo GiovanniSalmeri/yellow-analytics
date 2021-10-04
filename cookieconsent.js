@@ -12,6 +12,9 @@ https://github.com/GiovanniSalmeri/yellow-cookieconsent
 + Deleted addCss
 + Deleted languages
 + Added Matomo
++ Added Open Web Analytics
++ Cookies banner prepended, not appended (accessibility)
++ ARIA roles added (accessibility)
 
 */
 
