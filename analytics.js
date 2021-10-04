@@ -160,7 +160,7 @@ class GlowCookies {
     if (this.tracking.OpenWebAnalyticsUrl) {
       let OpenWebAnalyticsParts = this.tracking.OpenWebAnalyticsUrl.split("#");
       let OpenWebAnalyticsScript = document.createElement('script');
-      OpenWebAnalyticsScript.setAttribute('src', `'//${OpenWebAnalyticsParts[0]}//modules/base/js/owa.tracker-combined-min.js';`);
+      OpenWebAnalyticsScript.setAttribute('src', `//${OpenWebAnalyticsParts[0]}//modules/base/js/owa.tracker-combined-min.js`);
       document.head.appendChild(OpenWebAnalyticsScript);
       let OpenWebAnalyticsData = document.createElement('script');
       OpenWebAnalyticsData.text = `
