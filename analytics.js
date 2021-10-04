@@ -28,7 +28,7 @@ class GlowCookies {
     // DOM ELEMENTS
     this.PreBanner = undefined
     this.Cookies = undefined
-    this.DOMbanner = undefined
+    this.Cookies = undefined
   }
 
   render() {
@@ -42,7 +42,6 @@ class GlowCookies {
     this.PreBanner.style.display = 'none';
       let PreBannerButton = document.createElement('button');
       PreBannerButton.type = 'button';
-      PreBannerButton.id = 'prebannerBtn';
       PreBannerButton.className = `prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} glowCookies__${this.config.border} animation`;
       PreBannerButton.style.color = this.banner.manageCookies.color;
       PreBannerButton.style.backgroundColor = this.banner.manageCookies.background;
@@ -52,7 +51,6 @@ class GlowCookies {
 
     // COOKIES BANNER
     this.Cookies = document.createElement('div');
-    this.Cookies.id = 'glowCookies-banner';
     this.Cookies.className = `glowCookies__banner glowCookies__banner__${this.config.bannerStyle} glowCookies__${this.config.border} glowCookies__${this.config.position}`;
     this.Cookies.style.backgroundColor = this.banner.background;
     this.Cookies.setAttribute('role', 'dialog');
@@ -80,7 +78,6 @@ class GlowCookies {
       CookiesButtons.className = 'btn__section';
         let CookiesButton1 = document.createElement('button');
         CookiesButton1.type = 'button';
-        CookiesButton1.id = 'acceptCookies';
         CookiesButton1.className = 'btn__accept accept__btn__styles';
         CookiesButton1.style.color = this.banner.acceptBtn.color;
         CookiesButton1.style.backgroundColor = this.banner.acceptBtn.background;
@@ -88,7 +85,6 @@ class GlowCookies {
       CookiesButtons.appendChild(CookiesButton1);
         let CookiesButton2 = document.createElement('button');
         CookiesButton2.type = 'button';
-        CookiesButton2.id = 'rejectCookies';
         CookiesButton2.className = 'btn__settings settings__btn__styles';
         CookiesButton2.style.color = this.banner.rejectBtn.color;
         CookiesButton2.style.backgroundColor = this.banner.rejectBtn.background;
@@ -97,12 +93,11 @@ class GlowCookies {
     this.Cookies.appendChild(CookiesButtons);
 
     document.body.insertBefore(this.Cookies,document.body.firstChild);
-    this.DOMbanner = document.getElementById('glowCookies-banner')
 
     // SET EVENT LISTENERS
-    document.getElementById('prebannerBtn').addEventListener('click', () => this.openSelector())
-    document.getElementById('acceptCookies').addEventListener('click', () => this.acceptCookies())
-    document.getElementById('rejectCookies').addEventListener('click', () => this.rejectCookies())
+    PreBannerButton.addEventListener('click', () => this.openSelector())
+    CookiesButton1.addEventListener('click', () => this.acceptCookies())
+    CookiesButton2.addEventListener('click', () => this.rejectCookies())
   }
 
   checkStatus() {
@@ -122,12 +117,12 @@ class GlowCookies {
 
   openManageCookies() {
     this.PreBanner.style.display = this.config.hideAfterClick ? "none" : "block"
-    this.DOMbanner.classList.remove('glowCookies__show')
+    this.Cookies.classList.remove('glowCookies__show')
   }
 
   openSelector() {
     this.PreBanner.style.display = "none";
-    this.DOMbanner.classList.add('glowCookies__show')
+    this.Cookies.classList.add('glowCookies__show')
   }
 
   acceptCookies() {
