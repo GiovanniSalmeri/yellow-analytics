@@ -28,7 +28,6 @@ class GlowCookies {
     // DOM ELEMENTS
     this.PreBanner = undefined
     this.Cookies = undefined
-    this.Cookies = undefined
   }
 
   render() {
