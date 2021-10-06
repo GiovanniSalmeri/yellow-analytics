@@ -42,8 +42,6 @@ class GlowCookies {
       let PreBannerButton = document.createElement('button');
       PreBannerButton.type = 'button';
       PreBannerButton.className = `prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} glowCookies__${this.config.border} animation`;
-      PreBannerButton.style.color = this.banner.manageCookies.color;
-      PreBannerButton.style.backgroundColor = this.banner.manageCookies.background;
       PreBannerButton.textContent = this.banner.manageCookies.text;
     this.PreBanner.appendChild(PreBannerButton);
     document.body.appendChild(this.PreBanner);
@@ -51,25 +49,21 @@ class GlowCookies {
     // COOKIES BANNER
     this.Cookies = document.createElement('div');
     this.Cookies.className = `glowCookies__banner glowCookies__banner__${this.config.bannerStyle} glowCookies__${this.config.border} glowCookies__${this.config.position}`;
-    this.Cookies.style.backgroundColor = this.banner.background;
     this.Cookies.setAttribute('role', 'dialog');
     this.Cookies.setAttribute('aria-modal', 'false');
     this.Cookies.setAttribute('aria-labelledby', 'cookie-consent-title');
     this.Cookies.setAttribute('aria-describedby', 'cookie-consent-message');
       let CookiesHeading = document.createElement('h3');
       CookiesHeading.id = 'cookie-consent-title';
-      CookiesHeading.style.color = this.banner.color;
       CookiesHeading.textContent = this.banner.heading;
     this.Cookies.appendChild(CookiesHeading);
       let CookiesContent = document.createElement('p');
       CookiesContent.id = 'cookie-consent-message';
-      CookiesContent.style.color = this.banner.color;
         let CookiesNotice = document.createTextNode(this.banner.description+' ');
       CookiesContent.appendChild(CookiesNotice);
         let CookiesLink = document.createElement('a');
         CookiesLink.href = this.banner.link;
         CookiesLink.className = 'read__more';
-        CookiesLink.style.color = this.banner.color;
         CookiesLink.textContent = this.banner.linkText;
       CookiesContent.appendChild(CookiesLink);
     this.Cookies.appendChild(CookiesContent);
@@ -78,15 +72,11 @@ class GlowCookies {
         let CookiesButton1 = document.createElement('button');
         CookiesButton1.type = 'button';
         CookiesButton1.className = 'btn__accept accept__btn__styles';
-        CookiesButton1.style.color = this.banner.acceptBtn.color;
-        CookiesButton1.style.backgroundColor = this.banner.acceptBtn.background;
         CookiesButton1.textContent = this.banner.acceptBtn.text;
       CookiesButtons.appendChild(CookiesButton1);
         let CookiesButton2 = document.createElement('button');
         CookiesButton2.type = 'button';
         CookiesButton2.className = 'btn__settings settings__btn__styles';
-        CookiesButton2.style.color = this.banner.rejectBtn.color;
-        CookiesButton2.style.backgroundColor = this.banner.rejectBtn.background;
         CookiesButton2.textContent = this.banner.rejectBtn.text;
       CookiesButtons.appendChild(CookiesButton2);
     this.Cookies.appendChild(CookiesButtons);
@@ -313,22 +303,14 @@ class GlowCookies {
       description: obj.bannerDescription || lang.bannerDescription,
       linkText: obj.bannerLinkText || lang.bannerLinkText,
       link: obj.policyLink || '#link',
-      background: obj.bannerBackground || '#fff',
-      color: obj.bannerColor || '#1d2e38',
       heading: obj.bannerHeading !== 'none' ? obj.bannerHeading || lang.bannerHeading : '',
       acceptBtn: {
         text: obj.acceptBtnText || lang.acceptBtnText,
-        background: obj.acceptBtnBackground || '#253b48',
-        color: obj.acceptBtnColor || '#fff'
       },
       rejectBtn: {
         text: obj.rejectBtnText || lang.rejectBtnText,
-        background: obj.rejectBtnBackground || '#E8E8E8',
-        color: obj.rejectBtnColor || '#636363'
       },
       manageCookies: {
-        color: obj.manageColor || '#1d2e38',
-        background: obj.manageBackground || '#fff',
         text: obj.manageText || lang.manageText,
       }
     }

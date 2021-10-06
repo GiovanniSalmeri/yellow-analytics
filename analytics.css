@@ -32,6 +32,8 @@
   -moz-box-shadow: 0 .625em 1.875em rgba(2,2,3,.2);
   box-shadow: 0 .625em 1.875em rgba(2,2,3,.2);
   transition: transform .2s ease, opacity .2s ease !important;
+  background-color: #fff;
+  color: #1d2e38;
 }
 
 .glowCookies__banner .accept__btn__styles {
@@ -44,6 +46,8 @@
   font-weight: bolder;
   transition: filter 0.15s;
   user-select: none;
+  background-color: #253b48;
+  color: #fff;
 }
 
 .glowCookies__banner .settings__btn__styles {
@@ -56,6 +60,8 @@
   font-weight: bolder;
   transition: filter 0.15s;
   user-select: none;
+  background-color: #E8E8E8;
+  color: #636363;
 }
 
 .glowCookies__banner .btn__section button:focus {
@@ -277,6 +283,8 @@
   -webkit-box-shadow: 0 .625em 1.875em rgba(2,2,3,.1);
   -moz-box-shadow: 0 .625em 1.875em rgba(2,2,3,.1);
   box-shadow: 0 .625em 1.875em rgba(2,2,3,.1);
+  color: #1d2e38;
+  background-color: #fff;
 }
 
 .prebanner__border__1 {
