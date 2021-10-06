@@ -105,7 +105,7 @@ class GlowCookies {
   }
 
   openManageCookies() {
-    this.PreBanner.style.display = this.config.hideAfterClick ? "none" : "block"
+    this.PreBanner.style.display = "block"
     this.Cookies.classList.remove('glowCookies__show')
   }
 
@@ -285,7 +285,6 @@ class GlowCookies {
 
     this.config = {
       position: obj.position || 'left',
-      hideAfterClick: obj.hideAfterClick || false,
       bannerStyle: obj.style || 2
     }
 
