@@ -37,12 +37,12 @@ class YellowAnalytics {
                     facebookPixel => $this->yellow->system->get("analyticsFacebookPixel"),
                     hotjar => $this->yellow->system->get("analyticsHotjar"),
                     policyLink => $this->yellow->system->get("analyticsPolicy") ? $page->getBase($this->yellow->system->get("coreMultiLanguageMode"))."/".$this->yellow->system->get("analyticsPolicy") : null,
-                    bannerHeading => $this->yellow->language->getTextHtml("analyticsBannerHeading"),
+                    bannerHeading => $this->yellow->language->getText("analyticsBannerHeading"),
                     bannerDescription => $this->yellow->language->getTextHtml("analyticsBannerDescription"),
-                    bannerLinkText => $this->yellow->language->getTextHtml("analyticsBannerLinkText"),
-                    acceptBtnText => $this->yellow->language->getTextHtml("analyticsAcceptBtnText"),
-                    rejectBtnText => $this->yellow->language->getTextHtml("analyticsRejectBtnText"),
-                    manageText => $this->yellow->language->getTextHtml("analyticsManageText"),
+                    bannerLinkText => $this->yellow->language->getText("analyticsBannerLinkText"),
+                    acceptBtnText => $this->yellow->language->getText("analyticsAcceptBtnText"),
+                    rejectBtnText => $this->yellow->language->getText("analyticsRejectBtnText"),
+                    manageText => $this->yellow->language->getText("analyticsManageText"),
                 ], JSON_UNESCAPED_UNICODE);
                 $output .= ");\n";
                 $output .= "</script>\n";
