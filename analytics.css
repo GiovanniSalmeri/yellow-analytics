@@ -1,8 +1,4 @@
 /* CUSTOM CLASSES */
-.glowCookies__border {
-  border: 1px solid #e6e6e6 !important;
-}
-
 .glowCookies__left {
   left: 15px;
 }
@@ -34,6 +30,7 @@
   transition: transform .2s ease, opacity .2s ease !important;
   background-color: #fff;
   color: #1d2e38;
+border: 1px solid #e6e6e6 !important;
 }
 
 .glowCookies__banner .accept__btn__styles {
@@ -285,6 +282,7 @@
   box-shadow: 0 .625em 1.875em rgba(2,2,3,.1);
   color: #1d2e38;
   background-color: #fff;
+border: 1px solid #e6e6e6 !important;
 }
 
 .prebanner__border__1 {

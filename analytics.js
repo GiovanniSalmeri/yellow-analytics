@@ -41,14 +41,14 @@ class GlowCookies {
     this.PreBanner.style.display = 'none';
       let PreBannerButton = document.createElement('button');
       PreBannerButton.type = 'button';
-      PreBannerButton.className = `prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} glowCookies__${this.config.border} animation`;
+      PreBannerButton.className = `prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} animation`;
       PreBannerButton.textContent = this.banner.manageCookies.text;
     this.PreBanner.appendChild(PreBannerButton);
     document.body.appendChild(this.PreBanner);
 
     // COOKIES BANNER
     this.Cookies = document.createElement('div');
-    this.Cookies.className = `glowCookies__banner glowCookies__banner__${this.config.bannerStyle} glowCookies__${this.config.border} glowCookies__${this.config.position}`;
+    this.Cookies.className = `glowCookies__banner glowCookies__banner__${this.config.bannerStyle} glowCookies__${this.config.position}`;
     this.Cookies.setAttribute('role', 'dialog');
     this.Cookies.setAttribute('aria-modal', 'false');
     this.Cookies.setAttribute('aria-labelledby', 'cookie-consent-title');
@@ -284,7 +284,6 @@ class GlowCookies {
     //const lang = new LanguagesGC(languaje)
 
     this.config = {
-      border: obj.border || 'border',
       position: obj.position || 'left',
       hideAfterClick: obj.hideAfterClick || false,
       bannerStyle: obj.style || 2
