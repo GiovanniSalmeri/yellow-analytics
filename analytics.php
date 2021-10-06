@@ -9,6 +9,7 @@ class YellowAnalytics {
     public function onLoad($yellow) {
         $this->yellow = $yellow;
         $this->yellow->system->setDefault("analyticsStyle", "2"); // 1, 2 or 3
+        $this->yellow->system->setDefault("analyticsPosition", "right"); // left or right
         $this->yellow->system->setDefault("analyticsPolicy", "");
         $this->yellow->system->setDefault("analyticsMatomo", "");
         $this->yellow->system->setDefault("analyticsOpenWebAnalytics", "");
@@ -29,7 +30,7 @@ class YellowAnalytics {
                 $output .= "    glowCookies.start(null, ";
                 $output .= json_encode([
                     style => $this->yellow->system->get("analyticsStyle"),
-                    position => "right",
+                    position => $this->yellow->system->get("analyticsPosition"),
                     matomo => $this->yellow->system->get("analyticsMatomo"),
                     owa => $this->yellow->system->get("analyticsOpenWebAnalytics"),
                     google => $this->yellow->system->get("analyticsGoogleAnalytics"),
