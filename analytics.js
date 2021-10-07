@@ -19,13 +19,14 @@ https://github.com/GiovanniSalmeri/yellow-analytics
 */
 
 class GlowCookies {
+
   constructor() {
-    // Cookies banner
+     //Cookies banner
     this.banner = undefined
-    // Config
+     //Config
     this.config = undefined
     this.tracking = undefined
-    // DOM ELEMENTS
+     //DOM ELEMENTS
     this.PreBanner = undefined
     this.Cookies = undefined
   }
@@ -149,17 +150,19 @@ class GlowCookies {
     // Open Web Analytics
     if (this.tracking.OpenWebAnalyticsUrl) {
       let OpenWebAnalyticsParts = this.tracking.OpenWebAnalyticsUrl.split("#");
-      let OpenWebAnalyticsScript = document.createElement('script');
-      OpenWebAnalyticsScript.src = `//${OpenWebAnalyticsParts[0]}//modules/base/js/owa.tracker-combined-min.js`;
-      document.head.appendChild(OpenWebAnalyticsScript);
       let OpenWebAnalyticsData = document.createElement('script');
       OpenWebAnalyticsData.text = `
-        OWA.setSetting('baseUrl', '//${OpenWebAnalyticsParts[0]}/');
-        OWATracker = new OWA.tracker();
-        OWATracker.setSiteId('${OpenWebAnalyticsParts[1]}');
-        OWATracker.trackPageView();
-        OWATracker.trackClicks();
-        OWATracker.trackDomStream();`;
+        var owa_baseUrl = '//${OpenWebAnalyticsParts[0]}/';
+        var owa_cmds = owa_cmds || [];
+        owa_cmds.push(['setSiteId', '${OpenWebAnalyticsParts[1]}']);
+        owa_cmds.push(['trackPageView']);
+        owa_cmds.push(['trackClicks']);
+        owa_cmds.push(['trackDomStream']);
+        (function() {
+          var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
+          _owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
+          var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
+        }());`;
       document.head.appendChild(OpenWebAnalyticsData);
     }
 
