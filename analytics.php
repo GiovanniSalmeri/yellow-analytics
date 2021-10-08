@@ -27,7 +27,7 @@ class YellowAnalytics {
                 $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$extensionLocation}analytics.css\" />\n";
                 $output .= "<script type=\"text/javascript\"  src=\"{$extensionLocation}analytics.js\"></script>\n";
                 $output .= "<script type=\"text/javascript\" defer=\"defer\">\n";
-                $output .= "    glowCookies.start(null, ";
+                $output .= "    glowCookies.start(";
                 $output .= json_encode([
                     style => $this->yellow->system->get("analyticsStyle"),
                     position => $this->yellow->system->get("analyticsPosition"),
