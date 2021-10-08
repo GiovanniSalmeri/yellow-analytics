@@ -15,7 +15,7 @@ https://github.com/GiovanniSalmeri/yellow-analytics
 + Added Matomo
 + Added Open Web Analytics
 + Cookies banner prepended, not appended (accessibility)
-+ ARIA roles added (accessibility)
++ Added ARIA roles (accessibility)
 + Code simplified
 
 */
@@ -73,7 +73,7 @@ class GlowCookies {
       CookiesButtons.appendChild(CookiesButton2);
     this.Cookies.appendChild(CookiesButtons);
 
-    document.body.insertBefore(this.Cookies,document.body.firstChild);
+    document.body.insertBefore(this.Cookies, document.body.firstChild);
 
     // SET EVENT LISTENERS
     PreBannerButton.addEventListener('click', () => this.openSelector())
@@ -274,8 +274,7 @@ class GlowCookies {
   }
 
   start(obj) {
-    if (!obj) obj = {}
-    this.config = obj;
+    this.config = obj || {};
     this.config.position = this.config.position || 'left';
     this.config.style = this.config.style || 2;
 
