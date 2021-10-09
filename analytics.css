@@ -86,34 +86,34 @@
 
 /* BANNER STYLE 1 */
 /* ========================= */
-.glowCookies__banner__1 {
+.glowCookies__banner__rounded {
   bottom: 15px;
   border-radius: 10px; /* was 20 */
   padding: 20px 25px;
 }
 
-.glowCookies__banner__1 > h3 {
+.glowCookies__banner__rounded > h3 {
   font-size: 24px;
   margin: 0px;
   padding: 2px 0; /* was 8px 0 */
 }
 
-.glowCookies__banner__1 > p {
+.glowCookies__banner__rounded > p {
   font-size: 15px;
   margin: 0px;
   padding: 0px;
   line-height: 1.3;
 }
 
-.glowCookies__banner__1 .read__more {
+.glowCookies__banner__rounded .read__more {
   font-weight: bolder;
 }
 
-.glowCookies__banner__1 .read__more:hover {
+.glowCookies__banner__rounded .read__more:hover {
   color: #666666;
 }
 
-.glowCookies__banner__1 .btn__section {
+.glowCookies__banner__rounded .btn__section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -121,19 +121,19 @@
   margin-top: 20px;
 }
 
-.glowCookies__banner__1 .btn__section button {
+.glowCookies__banner__rounded .btn__section button {
   border-radius: 10px;
 }
 
 @media (max-width: 455px) {
-  .glowCookies__banner__1 {
+  .glowCookies__banner__rounded {
       bottom: 0px;
       left: 0px;
       right: 0px;
       margin: 7px;
   }
 
-  .glowCookies__banner__1 .btn__section {
+  .glowCookies__banner__rounded .btn__section {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -144,34 +144,34 @@
 
 /* BANNER STYLE 2 */
 /* ========================= */
-.glowCookies__banner__2 {
+.glowCookies__banner__medium {
   bottom: 15px;
   border-radius: 5px;
   padding: 15px 25px; /* was 25px 35px */
 }
 
-.glowCookies__banner__2 > h3 {
+.glowCookies__banner__medium > h3 {
   font-size: 24px;
   margin: 0px;
   padding: 2px 0; /* was 8px 0 */
 }
 
-.glowCookies__banner__2 > p {
+.glowCookies__banner__medium > p {
   font-size: 15px;
   margin: 0px;
   padding: 0px;
   line-height: 1.3;
 }
 
-.glowCookies__banner__2 .read__more {
+.glowCookies__banner__medium .read__more {
   font-weight: bolder;
 }
 
-.glowCookies__banner__2 .read__more:hover {
+.glowCookies__banner__medium .read__more:hover {
   opacity: 0.8;
 }
 
-.glowCookies__banner__2 .btn__section {
+.glowCookies__banner__medium .btn__section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -179,12 +179,12 @@
   margin-top: 20px;
 }
 
-.glowCookies__banner__2 .btn__section button {
+.glowCookies__banner__medium .btn__section button {
   border-radius: 5px;
 }
 
 @media (max-width: 455px) {
-  .glowCookies__banner__2 {
+  .glowCookies__banner__medium {
       bottom: 0px;
       left: 0px;
       right: 0px;
@@ -193,7 +193,7 @@
       max-width: 550px;
   }
 
-  .glowCookies__banner__2 .btn__section {
+  .glowCookies__banner__medium .btn__section {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -203,34 +203,34 @@
 
 /* BANNER STYLE 3 */
 /* ========================= */
-.glowCookies__banner__3 {
+.glowCookies__banner__squared {
   bottom: 15px;
   border-radius: 0px;
   padding: 15px 25px; /* was 25px 35px */
 }
 
-.glowCookies__banner__3 > h3 {
+.glowCookies__banner__squared > h3 {
   font-size: 30px;
   margin: 0px;
   padding: 2px 0; /* was 8px 0 */
 }
 
-.glowCookies__banner__3 > p {
+.glowCookies__banner__squared > p {
   font-size: 15px;
   margin: 0px;
   padding: 0px;
   line-height: 1.3;
 }
 
-.glowCookies__banner__3 .read__more {
+.glowCookies__banner__squared .read__more {
   font-weight: bolder;
 }
 
-.glowCookies__banner__3 .read__more:hover {
+.glowCookies__banner__squared .read__more:hover {
   opacity: 0.8;
 }
 
-.glowCookies__banner__3 .btn__section {
+.glowCookies__banner__squared .btn__section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -238,12 +238,12 @@
   margin-top: 25px;
 }
 
-.glowCookies__banner__3 .btn__section button {
+.glowCookies__banner__squared .btn__section button {
   border-radius: 0px;
 }
 
 @media (max-width: 455px) {
-  .glowCookies__banner__3 {
+  .glowCookies__banner__squared {
       bottom: 0px;
       left: 0px;
       right: 0px;
@@ -252,7 +252,7 @@
       max-width: 550px;
   }
 
-  .glowCookies__banner__3 .btn__section {
+  .glowCookies__banner__squared .btn__section {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -285,15 +285,15 @@
   border: 1px solid #e6e6e6 !important; /* added */
 }
 
-.prebanner__border__1 {
+.prebanner__border__rounded {
   border-radius: 10px; /* was 15 */
 }
 
-.prebanner__border__2 {
+.prebanner__border__medium {
   border-radius: 5px; /* was 10 */
 }
 
-.prebanner__border__3 {
+.prebanner__border__squared {
   border-radius: 0px; /* was 2 */
 }
 

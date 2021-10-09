@@ -8,7 +8,7 @@ class YellowAnalytics {
     // Handle initialisation
     public function onLoad($yellow) {
         $this->yellow = $yellow;
-        $this->yellow->system->setDefault("analyticsStyle", "2"); // 1, 2 or 3
+        $this->yellow->system->setDefault("analyticsStyle", "medium"); // rounded, medium or squared
         $this->yellow->system->setDefault("analyticsPosition", "right"); // left or right
         $this->yellow->system->setDefault("analyticsPolicy", "");
         $this->yellow->system->setDefault("analyticsMatomo", "");
