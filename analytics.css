@@ -30,7 +30,7 @@
   transition: transform .2s ease, opacity .2s ease !important;
   background-color: #fff;
   color: #1d2e38;
-border: 1px solid #e6e6e6 !important;
+  border: 1px solid #e6e6e6 !important; /* added */
 }
 
 .glowCookies__banner .accept__btn__styles {
@@ -88,7 +88,7 @@ border: 1px solid #e6e6e6 !important;
 /* ========================= */
 .glowCookies__banner__1 {
   bottom: 15px;
-  border-radius: 20px;
+  border-radius: 10px; /* was 20 */
   padding: 20px 25px;
 }
 
@@ -282,19 +282,19 @@ border: 1px solid #e6e6e6 !important;
   box-shadow: 0 .625em 1.875em rgba(2,2,3,.1);
   color: #1d2e38;
   background-color: #fff;
-border: 1px solid #e6e6e6 !important;
+  border: 1px solid #e6e6e6 !important; /* added */
 }
 
 .prebanner__border__1 {
-  border-radius: 15px;
+  border-radius: 10px; /* was 15 */
 }
 
 .prebanner__border__2 {
-  border-radius: 10px;
+  border-radius: 5px; /* was 10 */
 }
 
 .prebanner__border__3 {
-  border-radius: 2px;
+  border-radius: 0px; /* was 2 */
 }
 
 .animation {
