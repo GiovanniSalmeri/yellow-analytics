@@ -29,20 +29,20 @@ class YellowAnalytics {
                 $output .= "<script type=\"text/javascript\" defer=\"defer\">\n";
                 $output .= "    glowCookies.start(";
                 $output .= json_encode([
-                    style => $this->yellow->system->get("analyticsStyle"),
-                    position => $this->yellow->system->get("analyticsPosition"),
-                    matomo => $this->yellow->system->get("analyticsMatomo"),
-                    owa => $this->yellow->system->get("analyticsOpenWebAnalytics"),
-                    google => $this->yellow->system->get("analyticsGoogleAnalytics"),
-                    facebookPixel => $this->yellow->system->get("analyticsFacebookPixel"),
-                    hotjar => $this->yellow->system->get("analyticsHotjar"),
-                    policyLink => $this->yellow->system->get("analyticsPolicy") ? $page->getBase($this->yellow->system->get("coreMultiLanguageMode"))."/".$this->yellow->system->get("analyticsPolicy") : null,
-                    bannerHeading => $this->yellow->language->getText("analyticsBannerHeading"),
-                    bannerDescription => $this->yellow->language->getTextHtml("analyticsBannerDescription"),
-                    bannerLinkText => $this->yellow->language->getText("analyticsBannerLinkText"),
-                    acceptBtnText => $this->yellow->language->getText("analyticsAcceptBtnText"),
-                    rejectBtnText => $this->yellow->language->getText("analyticsRejectBtnText"),
-                    manageText => $this->yellow->language->getText("analyticsManageText"),
+                    "style" => $this->yellow->system->get("analyticsStyle"),
+                    "position" => $this->yellow->system->get("analyticsPosition"),
+                    "matomo" => $this->yellow->system->get("analyticsMatomo"),
+                    "owa" => $this->yellow->system->get("analyticsOpenWebAnalytics"),
+                    "google" => $this->yellow->system->get("analyticsGoogleAnalytics"),
+                    "facebookPixel" => $this->yellow->system->get("analyticsFacebookPixel"),
+                    "hotjar" => $this->yellow->system->get("analyticsHotjar"),
+                    "policyLink" => $this->yellow->system->get("analyticsPolicy") ? $page->getBase($this->yellow->system->get("coreMultiLanguageMode"))."/".$this->yellow->system->get("analyticsPolicy") : null,
+                    "bannerHeading" => $this->yellow->language->getText("analyticsBannerHeading"),
+                    "bannerDescription" => $this->yellow->language->getTextHtml("analyticsBannerDescription"),
+                    "bannerLinkText" => $this->yellow->language->getText("analyticsBannerLinkText"),
+                    "acceptBtnText" => $this->yellow->language->getText("analyticsAcceptBtnText"),
+                    "rejectBtnText" => $this->yellow->language->getText("analyticsRejectBtnText"),
+                    "manageText" => $this->yellow->language->getText("analyticsManageText"),
                 ], JSON_UNESCAPED_UNICODE);
                 $output .= ");\n";
                 $output .= "</script>\n";
