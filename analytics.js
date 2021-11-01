@@ -158,16 +158,16 @@ class GlowCookies {
     }
 
     // Google Analytics Tracking
-    if (this.tracking.AnalyticsCode) {
+    if (this.config.google) {
       let Analytics = document.createElement('script');
-      Analytics.src = `https://www.googletagmanager.com/gtag/js?id=${this.tracking.AnalyticsCode}`;
+      Analytics.src = `https://www.googletagmanager.com/gtag/js?id=${this.config.google}`;
       document.head.appendChild(Analytics);
       let AnalyticsData = document.createElement('script');
       AnalyticsData.text = `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '${this.tracking.AnalyticsCode}');`;
+        gtag('config', '${this.config.google}');`;
       document.head.appendChild(AnalyticsData);
     }
 
