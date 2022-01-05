@@ -18,7 +18,7 @@ AnalyticsManageText: Настрой бисквитките
 
 Language: de
 AnalyticsBannerHeading: Verwendung von Cookies
-AnalyticsBannerDescription: Wir nutzen Eigene und Cookies Dritter um Inhalte zu personalisieren und Surfverhalten zu analysieren.
+AnalyticsBannerDescription: Wir nutzen eigene und Cookies Dritter, um Inhalte zu personalisieren und Surfverhalten zu analysieren.
 AnalyticsBannerLinkText: Mehr über Cookies
 AnalyticsAcceptBtnText: Cookies akzeptieren
 AnalyticsRejectBtnText: Ablehnen
