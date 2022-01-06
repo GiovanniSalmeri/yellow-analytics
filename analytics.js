@@ -1,3 +1,5 @@
+// Analytics extension, https://github.com/GiovanniSalmeri/yellow-analytics
+
 "use strict";
 /*
     GLOW COOKIES
