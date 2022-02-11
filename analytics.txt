@@ -68,8 +68,8 @@ Language: nl
 AnalyticsBannerHeading: We gebruiken cookies
 AnalyticsBannerDescription: We gebruiken onze en third-party cookies om content te personaliseren en web traffic te analyseren.
 AnalyticsBannerLinkText: Lees meer over cookies
-AnalyticsAcceptBtnText: Accepteren cookies
-AnalyticsRejectBtnText: Wijgeren
+AnalyticsAcceptBtnText: Cookies accepteren
+AnalyticsRejectBtnText: Weigeren
 AnalyticsManageText: Cookies beheren
 
 Language: oc
