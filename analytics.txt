@@ -80,6 +80,14 @@ AnalyticsAcceptBtnText: Acceptar los cookies
 AnalyticsRejectBtnText: Refusar
 AnalyticsManageText: Configurar los cookies
 
+Language: pl
+AnalyticsBannerHeading: Używamy plików cookie
+AnalyticsBannerDescription: Ta strona używa plików cookie – zarówno własnych, jak i od zewnętrznych dostawców – w celu personalizacji treści i analizy ruchu.
+AnalyticsBannerLinkText: Więcej o plikach cookie
+AnalyticsAcceptBtnText: Zaakceptuj pliki cookie
+AnalyticsRejectBtnText: Odrzuć
+AnalyticsManageText: Ustawienia plików cookie
+
 Language: pt
 AnalyticsBannerHeading: Uso de cookies
 AnalyticsBannerDescription: Usamos cookies próprios e de terceiros para personalizar o conteúdo e analisar o tráfego da web.
