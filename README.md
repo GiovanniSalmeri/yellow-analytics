@@ -2,7 +2,7 @@ Analytics 0.8.16
 =================
 Web analytics and cookie consent banner.
 
-<p align="center"><img src="analytics-screenshot.png?raw=true" width="795" height="836" alt="Screenshot"></p>
+<p align="center"><img src="analytics-screenshot.png?raw=true" alt="Screenshot"></p>
 
 ## How to add web analytics
 
