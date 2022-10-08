@@ -34,4 +34,4 @@ This extension uses [GlowCookies](https://manucaralmo.github.io/glow-cookies-web
 
 ## Developer
 
-Giovanni Salmeri. [Get help](https://github.com/GiovanniSalmeri/yellow-analytics/issues).
+Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/)
