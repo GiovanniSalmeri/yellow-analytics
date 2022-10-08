@@ -28,7 +28,7 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 ## Installation
 
-[Download extension](https://github.com/GiovanniSalmeri/yellow-analytics/archive/master.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
+[Download extension](https://github.com/GiovanniSalmeri/yellow-analytics/archive/main.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
 
 This extension uses [GlowCookies](https://manucaralmo.github.io/glow-cookies-web/) by Manuel Carrillo Almoguera.
 
