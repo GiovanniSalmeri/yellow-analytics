@@ -23,8 +23,8 @@ The extension does nothing if no service is configured.
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
-`AnalyticsStyle` = banner style; possible values are `rounded`, `medium`, `squared`  
-`AnalyticsPosition` = banner position; possible values are `left` and `right`  
+`AnalyticsStyle` = banner style, `rounded`, `medium`, or `squared`  
+`AnalyticsPosition` = banner position, `left` or `right`  
 `AnalyticsPolicy` = page for policy, e.g. `cookies`  
 `AnalyticsMatomo` = Matomo URL and siteId, e.g. `mysite.org/matomo#1`  
 `AnalyticsOpenWebAnalytics` = Open Web Analytics URL and siteId, e.g. `mysite.org/owa#12345`  
