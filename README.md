@@ -2,7 +2,7 @@ Analytics 0.8.16
 =================
 Web analytics and cookie consent banner.
 
-<p align="center"><img src="SCREENSHOT.png?raw=true" alt="Screenshot"></p>
+<p align="center"><img src="SCREENSHOT.png" alt="Screenshot"></p>
 
 ## How to install an extension
 
