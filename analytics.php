@@ -2,7 +2,7 @@
 // Analytics extension, https://github.com/GiovanniSalmeri/yellow-analytics
 
 class YellowAnalytics {
-    const VERSION = "0.8.16";
+    const VERSION = "0.8.17";
     public $yellow;         // access to API
     
     // Handle initialisation

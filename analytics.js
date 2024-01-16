@@ -19,6 +19,7 @@ https://github.com/GiovanniSalmeri/yellow-analytics
 + Cookies banner prepended, not appended (accessibility)
 + Added ARIA roles (accessibility)
 + Code simplified
++ Fixed Google Analytis (https://github.com/manucaralmo/GlowCookies/issues/73)
 
 */
 
@@ -225,6 +226,11 @@ class GlowCookies {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+        // https://stackoverflow.com/questions/58801416/disabling-cookies-in-google-analytics-gtag-js
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied'
+        });
         gtag('config', '${this.config.google}' , {
           'client_storage': 'none',
           'anonymize_ip': true

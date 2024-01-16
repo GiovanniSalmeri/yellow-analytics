@@ -1,4 +1,4 @@
-Analytics 0.8.16
+Analytics 0.8.17
 =================
 Web analytics and cookie consent banner.
 
