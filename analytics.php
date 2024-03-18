@@ -16,7 +16,7 @@ class YellowAnalytics {
         $this->yellow->system->setDefault("analyticsGoogleAnalytics", "");
         $this->yellow->system->setDefault("analyticsFacebookPixel", "");
         $this->yellow->system->setDefault("analyticsHotjar", "");
-        $this->yellow->language->setDefaults([
+        $this->yellow->language->setDefaults(array(
             "Language: af",
             "AnalyticsBannerHeading: Ons gebruik koekies",
             "AnalyticsBannerDescription: Ons gebruik ons eie koekies en die van derdepartye, om inhoud te verpersoonlik en om webverkeer te ontleed.",
@@ -136,7 +136,7 @@ class YellowAnalytics {
             "AnalyticsAcceptBtnText: Ок, используйте",
             "AnalyticsRejectBtnText: Не разрешаю",
             "AnalyticsManageText: Разрешите использовать куки?",
-        ]);
+        ));
     }
     
     // Handle page extra data
