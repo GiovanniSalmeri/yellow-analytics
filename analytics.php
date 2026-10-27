@@ -2,7 +2,7 @@
 // Analytics extension, https://github.com/GiovanniSalmeri/yellow-analytics
 
 class YellowAnalytics {
-    const VERSION = "0.9.1";
+    const VERSION = "1.0.0";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -145,8 +145,8 @@ class YellowAnalytics {
         if ($name=="header") {
             if ($this->yellow->system->isExisting("analyticsMatomo") || $this->yellow->system->isExisting("analyticsOpenWebAnalytics") || $this->yellow->system->isExisting("analyticsGoogleAnalytics") || $this->yellow->system->isExisting("analyticsFacebookPixel") || $this->yellow->system->isExisting("analyticsHotjar")) {
                 $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
-                $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$assetLocation}analytics.css\" />\n";
-                $output .= "<script type=\"text/javascript\"  src=\"{$assetLocation}analytics.js\"></script>\n";
+                $output = "<link rel=\"stylesheet\" media=\"all\" href=\"{$assetLocation}analytics.css\" />\n";
+                $output .= "<script  src=\"{$assetLocation}analytics.js\"></script>\n";
                 $output .= "<script type=\"text/javascript\">\n";
                 $output .= "    glowCookies.start(";
                 $output .= json_encode([
